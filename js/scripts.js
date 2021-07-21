@@ -93,7 +93,6 @@ function responsiveScroll(m) {
 
 var media = window.matchMedia("(max-width: 768px)")
 responsiveScroll(media)
-//media.addListener(responsiveScroll)
 
 // Scroll animation on click
 menuItems.on("click", function (e) {
@@ -144,7 +143,7 @@ $(window).scroll(function () {
         .parent()
         .removeClass("active")
         .end()
-        .filter("[href=#" + id + "]")
+        .filter(`[href=#${id}]`)
         .parent()
         .addClass("active");
     }
